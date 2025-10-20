@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enda Şenol | Kişisel Sayfa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- OpenLayers CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+  <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand"><span class="dot"></span> <span>Enda Şenol</span></div>
+      <a href="index.html">Hakkımda</a>
+      <a href="technologies.html">Teknolojiler</a>
+      <a href="projects.html">Projeler</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h1><span class="gradient">Merhaba, ben Enda Şenol.</span></h1>
+        <p>Geomatik Mühendisliği öğrencisi (Hacettepe Üniversitesi). CBS, fotogrametri, uzaktan algılama ve web haritalama konularında çalışmalar yapıyorum.</p>
+        <dl class="info">
+          <dt>Ad Soyad</dt><dd>Enda Şenol</dd>
+          <dt>İlkokul</dt><dd>Zonguldak Fener İlköğretim Okulu</dd>
+          <dt>Ortaokul</dt><dd>Zonguldak Yayla Ortaokulu</dd>
+          <dt>Lise</dt><dd>Zonguldak Anadolu Öğretmen Lisesi</dd>
+          <dt>Üniversite</dt><dd>Hacettepe Üniversitesi</dd>
+          <dt>Bölüm</dt><dd>Geomatik Mühendisliği</dd>
+          <dt>Diller</dt><dd>Türkçe, İngilizce (Orta)</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h2>OpenLayers Harita</h2>
+        <p>OpenLayers ile Hacettepe Üniversitesi <strong>Beytepe Kampüsü</strong> gösterimi.</p>
+        <div id="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Enda Şenol — GMT458 Kişisel Web Sayfası
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

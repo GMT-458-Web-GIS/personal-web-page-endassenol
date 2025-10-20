@@ -1,0 +1,152 @@
+/* styles.css - Enda Şenol | GMT458 Personal Web Page */
+
+:root{
+  --bg: #0b1020;
+  --card: #121a36;
+  --accent: #7c9cff;
+  --text: #e9eefc;
+  --muted: #9fb1ff;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  margin:0; padding:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background: radial-gradient(1200px 1200px at 10% 10%, #0e1632 0%, var(--bg) 40%);
+  min-height:100%;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Header with animated gradient underline */
+header{
+  position: sticky; top:0; z-index: 50;
+  background: linear-gradient(180deg, rgba(11,16,32,0.85) 0%, rgba(11,16,32,0.65) 70%, rgba(11,16,32,0) 100%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(124,156,255,0.15);
+}
+.nav{
+  display:flex; align-items:center; gap:14px; flex-wrap: wrap;
+  padding: 14px 24px;
+}
+.nav a{
+  text-decoration:none;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: transform .2s ease, background .2s ease;
+}
+.nav a:hover{ transform: translateY(-1px); background: rgba(124,156,255,0.12); }
+.brand{
+  font-weight: 800; letter-spacing: .5px; margin-right:auto;
+  display:flex; align-items:center; gap:10px;
+}
+.brand .dot{
+  width:10px; height:10px; border-radius:50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ transform: scale(1); opacity: 1;}
+  50%{ transform: scale(1.2); opacity: .65;}
+}
+
+/* Hero */
+.hero{
+  display:grid; grid-template-columns: 1.3fr .7fr; gap: 24px; align-items: center;
+  margin-top: 18px;
+}
+.card{
+  background: var(--card);
+  border: 1px solid rgba(124,156,255,0.18);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+h1, h2, h3{ margin: 0 0 10px; }
+h1{ font-size: clamp(26px, 2.6vw, 40px); }
+p{ line-height: 1.6; color: #d7def7; }
+
+/* Animated gradient text */
+.gradient{
+  background: linear-gradient(90deg,#9cb7ff,#a4ffe6,#7c9cff,#f7c3ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300% 100%;
+  animation: slide 10s linear infinite;
+}
+@keyframes slide{
+  0%{ background-position: 0% 50%; }
+  100%{ background-position: 300% 50%; }
+}
+
+/* Info list */
+.info{
+  display:grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;
+}
+.info dt{ color: var(--muted); }
+.info dd{ margin:0 0 6px; }
+
+/* Tech table */
+.table-wrap{ overflow-x: auto; }
+table{
+  width:100%; border-collapse: collapse; margin: 8px 0 0;
+}
+th, td{
+  padding: 12px 10px; text-align: left; vertical-align: middle;
+  border-bottom: 1px dashed rgba(124,156,255,0.22);
+}
+th{ color:#b8c7ff; font-weight:700; }
+tr:hover{ background: rgba(124,156,255,0.08); }
+.tech{
+  display:flex; align-items:center; gap:10px;
+}
+.tech img{ width:24px; height:24px; }
+
+/* Progress bar */
+.progress{
+  width: 100%;
+  height: 10px;
+  background: rgba(124,156,255,0.18);
+  border-radius: 999px;
+  overflow:hidden;
+}
+.progress > span{
+  display:block; height:100%;
+  background: linear-gradient(90deg, #7c9cff, #a4ffe6);
+  width: var(--val, 50%);
+  box-shadow: 0 0 12px rgba(124,156,255,0.5) inset;
+  transition: width .8s ease;
+}
+
+/* Projects gallery */
+.grid{
+  display:grid; gap:16px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.proj{
+  display:flex; flex-direction:column; gap:10px;
+}
+.proj img{ width:100%; height:150px; object-fit:cover; border-radius:12px; border:1px solid rgba(124,156,255,0.18); }
+.proj h3{ margin:0; }
+
+/* Map */
+#map{
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(124,156,255,0.18);
+}
+
+/* Footer */
+footer{ text-align:center; color:#a7b6ff; padding: 40px 0 80px; }
+footer a{ color: var(--muted); }
