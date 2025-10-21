@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projeler | Enda Şenol</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enda Şenol | Projeler</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header>
+<body class="page-projects">
+  <div id="bg"></div>
+
+  <header class="site-header">
     <nav class="nav">
       <div class="brand"><span class="dot"></span> <span>Enda Şenol</span></div>
       <a href="index.html">Hakkımda</a>
       <a href="technologies.html">Teknolojiler</a>
-      <a href="projects.html">Projeler</a>
+      <a href="projects.html" aria-current="page">Projeler</a>
     </nav>
   </header>
 
   <main class="container">
-    <div class="card">
-      <h2>Projeler</h2>
-      <p>Öne çıkan çalışmalarım:</p>
+    <section class="card">
+      <h1>Projeler</h1>
       <div class="grid">
         <article class="proj card">
           <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Web Scraping">
           <h3>AVM Verileriyle Web Scraping</h3>
-          <p>Python (Requests/BeautifulSoup) ile AVM etkinlik/veri toplama, CSV/JSON çıktı, harita görselleştirme planı.</p>
+          <p>Python (Requests/BeautifulSoup) ile AVM etkinlik/veri toplama; CSV/JSON çıktı; harita görselleştirme planı.</p>
         </article>
 
         <article class="proj card">
           <img src="https://images.unsplash.com/photo-1551547601-9a30b0db77f8?q=80&w=1200&auto=format&fit=crop" alt="3B Maden">
           <h3>Maden Sahasının 3B Oluşturulması ve Çizimi</h3>
-          <p>Agisoft ile nokta bulutu ve mesh üretimi; NetCAD/QGIS ile pafta düzeni ve vektör çizimleri.</p>
+          <p>Agisoft ile nokta bulutu &amp; mesh; NetCAD/QGIS ile pafta düzeni ve vektör çizimler.</p>
         </article>
 
         <article class="proj card">
           <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1200&auto=format&fit=crop" alt="Kadın Güvenlik Haritası">
           <h3>Kadın Güvenlik Haritası</h3>
-          <p>Flask + PostGIS tabanlı güvenli/tehlikeli noktaların tutulduğu, destek merkezlerini gösteren web haritası.</p>
+          <p>Flask + PostGIS tabanlı; güvenli/tehlikeli noktalar ve destek merkezlerinin web haritası.</p>
         </article>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>© <span id="y"></span> Enda Şenol — Projeler</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">© <span id="y"></span> Enda Şenol — Projeler</footer>
   <script src="app.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+

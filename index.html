@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enda Şenol | Kişisel Sayfa</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enda Şenol | Hakkımda</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- OpenLayers CDN -->
+  <!-- OpenLayers -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
   <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
 </head>
-<body>
-  <header>
+<body class="page-index">
+  <!-- Tam ekran arka plan -->
+  <div id="bg"></div>
+
+  <header class="site-header">
     <nav class="nav">
       <div class="brand"><span class="dot"></span> <span>Enda Şenol</span></div>
-      <a href="index.html">Hakkımda</a>
+      <a href="index.html" aria-current="page">Hakkımda</a>
       <a href="technologies.html">Teknolojiler</a>
       <a href="projects.html">Projeler</a>
-      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="card">
-        <h1><span class="gradient">Merhaba, ben Enda Şenol.</span></h1>
-        <p>Geomatik Mühendisliği öğrencisi (Hacettepe Üniversitesi). CBS, fotogrametri, uzaktan algılama ve web haritalama konularında çalışmalar yapıyorum.</p>
+    <section class="hero grid-2">
+      <article class="card">
+        <h1 class="gradient">Merhaba, ben Enda Şenol.</h1>
+        <p>Hacettepe Üniversitesi <strong>Geomatik Mühendisliği</strong> öğrencisiyim. CBS, fotogrametri, uzaktan algılama ve web haritalama alanlarında çalışıyorum.</p>
         <dl class="info">
           <dt>Ad Soyad</dt><dd>Enda Şenol</dd>
           <dt>İlkokul</dt><dd>Zonguldak Fener İlköğretim Okulu</dd>
@@ -34,19 +36,23 @@
           <dt>Bölüm</dt><dd>Geomatik Mühendisliği</dd>
           <dt>Diller</dt><dd>Türkçe, İngilizce (Orta)</dd>
         </dl>
-      </div>
-      <div class="card">
+      </article>
+
+      <aside class="card">
         <h2>OpenLayers Harita</h2>
-        <p>OpenLayers ile Hacettepe Üniversitesi <strong>Beytepe Kampüsü</strong> gösterimi.</p>
+        <p>Hacettepe Üniversitesi <strong>Beytepe Kampüsü</strong> odağında.</p>
         <div id="map"></div>
-      </div>
+      </aside>
     </section>
   </main>
 
-  <footer>
-    © <span id="y"></span> Enda Şenol — GMT458 Kişisel Web Sayfası
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    © <span id="y"></span> Enda Şenol — Kişisel Web Sayfası
   </footer>
+
   <script src="app.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+

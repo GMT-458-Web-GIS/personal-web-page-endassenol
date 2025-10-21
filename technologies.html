@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teknolojiler | Enda Şenol</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enda Şenol | Teknolojiler</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
 </head>
-<body>
-  <header>
+<body class="page-technologies">
+  <div id="bg"></div>
+
+  <header class="site-header">
     <nav class="nav">
       <div class="brand"><span class="dot"></span> <span>Enda Şenol</span></div>
       <a href="index.html">Hakkımda</a>
-      <a href="technologies.html">Teknolojiler</a>
+      <a href="technologies.html" aria-current="page">Teknolojiler</a>
       <a href="projects.html">Projeler</a>
     </nav>
   </header>
 
   <main class="container">
-    <div class="card">
-      <h2>Teknolojiler</h2>
-      <p>Aşağıdaki tablo; kullandığım yazılım ve teknolojileri, kısa açıklamalarını ve seviyemi (yüzde) göstermektedir.</p>
+    <section class="card">
+      <h1>Teknolojiler</h1>
+      <p>Kullandığım yazılım/teknolojiler ve seviyelerim:</p>
+
       <div class="table-wrap">
-        <table>
+        <table class="table-plain">
           <thead>
             <tr>
               <th>Teknoloji</th>
@@ -32,85 +34,60 @@
           </thead>
           <tbody>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                <strong>Python</strong>
-              </td>
-              <td>Veri işleme, CBS otomasyonu, web scraping, bilimsel hesaplama.</td>
+              <td><strong>Python</strong></td>
+              <td>Veri işleme, CBS otomasyonu, web scraping, bilimsel hesaplama</td>
               <td><div class="progress" data-val="85%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qgis/qgis-original.svg" alt="QGIS">
-                <strong>QGIS</strong>
-              </td>
-              <td>Vektör/raster analizleri, stil ve çıktı haritaları, eklentiler.</td>
+              <td><strong>QGIS</strong></td>
+              <td>Vektör/raster analizleri, stil ve çıktı haritaları, eklentiler</td>
               <td><div class="progress" data-val="80%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Netcad_logo.png" alt="NetCAD">
-                <strong>NetCAD</strong>
-              </td>
-              <td>Proje çizimleri, maden ve yol uygulamaları, pafta düzeni.</td>
+              <td><strong>NetCAD</strong></td>
+              <td>Proje çizimleri, maden/yol uygulamaları, pafta düzeni</td>
               <td><div class="progress" data-val="75%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-                <strong>PostgreSQL/PostGIS</strong>
-              </td>
-              <td>Mekansal veritabanı tasarımı, sorgular, analiz.</td>
+              <td><strong>PostgreSQL / PostGIS</strong></td>
+              <td>Mekansal veritabanı tasarımı, sorgular ve analiz</td>
               <td><div class="progress" data-val="70%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openlayers/openlayers-original.svg" alt="OpenLayers">
-                <strong>OpenLayers</strong>
-              </td>
-              <td>Web haritalama, vektör/rastersel katmanlar, etkileşim.</td>
+              <td><strong>OpenLayers</strong></td>
+              <td>Web haritalama, vektör/raster katmanlar, etkileşim</td>
               <td><div class="progress" data-val="65%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                <strong>JavaScript</strong>
-              </td>
-              <td>İstemci tarafı etkileşim, OL ile harita kontrolü.</td>
+              <td><strong>JavaScript</strong></td>
+              <td>İstemci tarafı etkileşim, OL ile harita kontrolü</td>
               <td><div class="progress" data-val="60%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg" alt="Agisoft">
-                <strong>Agisoft Metashape</strong>
-              </td>
-              <td>Fotogrametrik iş akışları, nokta bulutu/ortofoto üretimi.</td>
+              <td><strong>Agisoft Metashape</strong></td>
+              <td>Fotogrametrik iş akışları, nokta bulutu/ortofoto üretimi</td>
               <td><div class="progress" data-val="70%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/MapInfo_Pro_Logo.png" alt="MapInfo">
-                <strong>MapInfo</strong>
-              </td>
-              <td>Vektör düzenleme, tematik haritalar.</td>
+              <td><strong>MapInfo</strong></td>
+              <td>Vektör düzenleme, tematik haritalar</td>
               <td><div class="progress" data-val="50%"><span></span></div></td>
             </tr>
             <tr>
-              <td class="tech">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="AI">
-                <strong>Yapay Zeka / AI</strong>
-              </td>
-              <td>ML tabanlı sınıflandırma, GRACE/RS öngörüleri, veri zenginleştirme.</td>
+              <td><strong>Yapay Zekâ / AI</strong></td>
+              <td>ML tabanlı sınıflandırma, GRACE/RS öngörüleri, veri zenginleştirme</td>
               <td><div class="progress" data-val="55%"><span></span></div></td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>© <span id="y"></span> Enda Şenol — Teknolojiler</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">© <span id="y"></span> Enda Şenol — Teknolojiler</footer>
   <script src="app.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+
